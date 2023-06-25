@@ -332,3 +332,4 @@ console.log("Test 11" + ": " + push("~(~a|~(b&c)&~i)"));
 console.log("Test 12" + ": " + push("~1&a|~(b|~(a&b|~(u|v&~y)|t&~0|(~(a&~(b|c|0)&1))))"))
 console.log("Test 13" + ": " + pushAndSimplify("~1&a|~(b|~(a&b|~(u|v&~y)|t&~1|(~(a&~(b|c|0)&1))))"))
 console.log("Test 14" + ": " + simplify("~1&a|~(b|~(a&b|~(u|v&~y)|t&~1|(~(a&~(b|c|0)&1))))"))
+console.log("Test 15" + ": " + pushAndSimplify("0|~(b|~c&(a|b|y&~0&i|~(u|~i&(1|0|~t|~(f|g)))|g|~(v|1)))"))
