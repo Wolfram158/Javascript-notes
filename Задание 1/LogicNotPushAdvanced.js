@@ -1,5 +1,5 @@
-const reverse = {'&' : '|', '|' : '&', '~' : ''};
 const operations = new Set(['&', '|', '~']);
+const map = {"and" : '&', "or" : '|', "negate" : '~'}
 
 class And {
     constructor(l, r) {
@@ -121,7 +121,11 @@ class Negate {
 
     toMiniString() {
         if (this.l.priority > 0) {
-            return "~" + this.l.toString();
+            if (this.l.priority !== 3) {
+                return "~" + "(" + this.l.l.toMiniString() + "" + map[this.l.signature] + "" + this.l.r.toMiniString() + ")";
+            } else {
+                return "~" + "(" + this.l.l.toMiniString() + ")";
+            }
         } else {
             return "~" + this.l.toMiniString();
         }
