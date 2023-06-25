@@ -318,18 +318,18 @@ const pushAndSimplify = function(s) {
     return parse(s).push().simplify().toMiniString();
 }
 
-console.log("Test 1" + ": " + push("~(a|b)"));
-console.log("Test 2" + ": " + push("~(a&b)"));
-console.log("Test 3" + ": " + push("~(a&b|c|(d|~(f&~g)&y|e))"));
-console.log("Test 4" + ": " + push("a&b|~(c&d|~f|~(h|~x)|u&~v|w)&~p|t"));
-console.log("Test 5" + ": " + push("a&b|(c|(r|a&~(f|~g&b&n&u|~t|y)))|~a"));
-console.log("Test 6" + ": " + push("~a&~(b|~(c|~h&(~f|~(k|~(b&~c)))))"));
-console.log("Test 7" + ": " + push("~(~(~(~a|b|c&d)&e|r)|~t&f|o)"));
-console.log("Test 8" + ": " + push("~0|b&(~a|1&~(0|b&c|i&~0&1))|~1"));
-console.log("Test 9" + ": " + pushAndSimplify("~0|b&(~a|1&~(0|b&c|i&~0&1))|~1"));
-console.log("Test 10" + ": " + simplify("~0|b&(~a|1&~(0|b&c|i&~0&1))|~1"));
-console.log("Test 11" + ": " + push("~(~a|~(b&c)&~i)"));
-console.log("Test 12" + ": " + push("~1&a|~(b|~(a&b|~(u|v&~y)|t&~0|(~(a&~(b|c|0)&1))))"))
-console.log("Test 13" + ": " + pushAndSimplify("~1&a|~(b|~(a&b|~(u|v&~y)|t&~1|(~(a&~(b|c|0)&1))))"))
-console.log("Test 14" + ": " + simplify("~1&a|~(b|~(a&b|~(u|v&~y)|t&~1|(~(a&~(b|c|0)&1))))"))
-console.log("Test 15" + ": " + pushAndSimplify("0|~(b|~c&(a|b|y&~0&i|~(u|~i&(1|0|~t|~(f|g)))|g|~(v|1)))"))
+console.log("Test 1: " + push("~(a|b)"));
+console.log("Test 2: " + push("~(a&b)"));
+console.log("Test 3: " + push("~(a&b|c|(d|~(f&~g)&y|e))"));
+console.log("Test 4: " + push("a&b|~(c&d|~f|~(h|~x)|u&~v|w)&~p|t"));
+console.log("Test 5: " + push("a&b|(c|(r|a&~(f|~g&b&n&u|~t|y)))|~a"));
+console.log("Test 6: " + push("~a&~(b|~(c|~h&(~f|~(k|~(b&~c)))))"));
+console.log("Test 7: " + push("~(~(~(~a|b|c&d)&e|r)|~t&f|o)"));
+console.log("Test 8: " + push("~0|b&(~a|1&~(0|b&c|i&~0&1))|~1"));
+console.log("Test 9: " + pushAndSimplify("~0|b&(~a|1&~(0|b&c|i&~0&1))|~1"));
+console.log("Test 10: " + simplify("~0|b&(~a|1&~(0|b&c|i&~0&1))|~1"));
+console.log("Test 11: " + push("~(~a|~(b&c)&~i)"));
+console.log("Test 12: " + push("~1&a|~(b|~(a&b|~(u|v&~y)|t&~0|(~(a&~(b|c|0)&1))))"))
+console.log("Test 13: " + pushAndSimplify("~1&a|~(b|~(a&b|~(u|v&~y)|t&~1|(~(a&~(b|c|0)&1))))"))
+console.log("Test 14: " + simplify("~1&a|~(b|~(a&b|~(u|v&~y)|t&~1|(~(a&~(b|c|0)&1))))"))
+console.log("Test 15: " + pushAndSimplify("0|~(b|~c&(a|b|y&~0&i|~(u|~i&(1|0|~t|~(f|g)))|g|~(v|1)))"))
