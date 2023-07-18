@@ -317,8 +317,9 @@ class GameServer {
         let player = 1;
         let choose = [undefined, this.player1, this.player2];
         while (true) {
-            console.log('Move of player {}: '.replace('{}', String(player)));
             choose[player].makeMove(this.board);
+            console.log(('Move of player {}: (' + (this.board.lastMove[0] + 1) +
+                ', ' + (this.board.lastMove[1] + 1) +')').replace('{}', String(player)));
             console.log('Board after move of player {}:'.replace('{}', String(player)))
             this.board.printBoard();
             configuration = this.board.getConfigurationType();
